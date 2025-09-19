@@ -1,0 +1,64 @@
+body {
+  background-color: rgb(226, 223, 223);
+}
+.page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(50, 49, 49);
+  height: 500px;
+  width: 450px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+.header-h {
+  background-color: rgb(43, 42, 42);
+  margin-top: -250px;
+  padding: 5px;
+  border-radius: 10px;
+  color: rgb(114, 116, 118);
+  border-color: rgb(43, 42, 42);
+}
+h1 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.inpt {
+  border-radius: 10px;
+  margin-top: 20px;
+  border-color: rgb(43, 42, 42);
+}
+input {
+  height: 40px;
+  width: 340px;
+  background-color: rgb(43, 42, 42);
+  padding: 10px;
+  border-radius: 10px;
+  border-color: rgb(43, 42, 42);
+  font-size: 15px;
+  color: rgb(114, 116, 118);
+  font-family: "Courier New", Courier, monospace;
+}
+button {
+  margin-top: 20px;
+  font-size: 15px;
+  width: 70px;
+  background-color: rgb(43, 42, 42);
+  border-color: rgb(43, 42, 42);
+  color: rgb(114, 116, 118);
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+}
+.button-class {
+  border-color: rgb(43, 42, 42);
+  margin-right: 262px;
+}
