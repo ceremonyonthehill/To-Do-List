@@ -4,18 +4,35 @@
     <link rel="stylesheet" href="tdl.css" />
   </head>
   <body>
+    <!--body-->
     <div class="page-container">
       <div class="container">
         <div class="header-h">
-          <h1>Selamat Datang di to-Do-List</h1>
+          <div id="profile" class="list"></div>
+          <ul id="doneList"></ul>
+          <div class="inpt">
+            <div id="todo-box">
+              <input type="text" id="inptA" placeholder="Enter your list" />
+              <label for="level">priority:</label>
+              <select id="level" name="level">
+                <option value=""></option>
+                <option value="Low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">high</option>
+              </select>
+              <button id="btn2" onclick="makeToDo()">makelist📝</button>
+            </div>
+          </div>
         </div>
-        <div class="inpt">
-          <input type="text" placeholder="Enter your list" />
-        </div>
-        <div class="button-class">
-          <button>Oke</button>
+        <div class="header-z">
+          <button id="btn1" onclick="clickButton()">profile🧑🏿‍💼</button>
+          <button id="btn3" onclick="doneList()">donelist✅</button>
+          <button id="btn4" onclick="deleteAll()">deleteall🗑️</button>
+          <ul id="makeList" class="ul-edit"></ul>
         </div>
       </div>
     </div>
+    <!--body-->
+    <script src="tdl.js"></script>
   </body>
 </html>
