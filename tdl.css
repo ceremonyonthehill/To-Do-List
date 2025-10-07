@@ -9,6 +9,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  margin: 4%;
 }
 .container {
   display: flex;
@@ -101,4 +102,11 @@ button {
 }
 .list {
   display: none;
+}
+
+
+@media (min-width: 768px) {
+  .page-container {
+    min-height: 600px;
+  }
 }
