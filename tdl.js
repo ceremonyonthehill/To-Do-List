@@ -1,50 +1,3 @@
-const del = document.getElementById("btn4");
-const body = document.getElementById("profile");
-const makeList = document.getElementById("makeList");
-const level = document.getElementById("level");
-function clickButton() {
-  if (body.innerHTML.trim() === "") {
-    const p4 = document.createElement("p");
-    p4.textContent = "/-/-/-/-/-/-/-/-/-/-/-/-/-/-/";
-    const p3 = document.createElement("p");
-    p3.textContent = "Welcome to To-Do-list";
-    const p1 = document.createElement("p");
-    p1.textContent = "Name: Radit";
-    const p2 = document.createElement("p");
-    p2.textContent = "Position: Employee";
-    const p5 = document.createElement("p");
-    p5.textContent = "/-/-/-/-/-/-/-/-/-/-/-/-/-/-/";
-
-    body.append(p4);
-    body.append(p3);
-    body.append(p1);
-    body.append(p2);
-    body.append(p5);
-    body.classList.remove("list");
-  } else {
-    body.innerHTML = "";
-    body.classList.add("list");
-  }
-}
-function deleteAll() {
-  const confirmed = confirm("do you sure your wanted to delete all?");
-  if (confirmed) {
-    makeList.innerHTML = "";
-  }
-}
-
-function doneList() {
-  const done = document.getElementById("doneList");
-  const tasks = makeList.querySelectorAll("li");
-  tasks.forEach((li) => {
-    const checkbox = li.querySelector("input[type='checkbox']");
-    if (checkbox && checkbox.checked) {
-      done.appendChild(li);
-      checkbox.disabled = true;
-    }
-  });
-}
-
 function makeToDo() {
   const input = document.getElementById("inptA").value;
   const inputValue = input.trim();
@@ -95,11 +48,22 @@ function makeToDo() {
     li.remove();
   };
 
-  li.appendChild(checkbox);
+  //basically adding div
+  const topRow = document.createElement("div");
+  topRow.classList.add("top-row");
+
+  topRow.appendChild(checkbox);
+  topRow.appendChild(dateText);
+  topRow.appendChild(closeBtn);
+
+  
+  li.appendChild(topRow);
   li.appendChild(taskText);
-  li.appendChild(dateText);
-  li.appendChild(closeBtn);
 
   makeList.appendChild(li);
+
   document.getElementById("inptA").value = "";
+
+  
 }
+

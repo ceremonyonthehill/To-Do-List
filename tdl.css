@@ -17,12 +17,16 @@ body {
   justify-content: flex-start;
   align-items: center;
   background-color: rgb(50, 49, 49);
-  min-height: 600px;
+  height: 600px;
   max-width: 450px;
   border-radius: 10px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   padding: 40px 30px 70px;
   width: 100%;
+   overflow-y: auto;            
+  resize: none;             
+  box-sizing: border-box;   
+
 }
 .header-h {
   background-color: rgb(43, 42, 42);
@@ -50,22 +54,57 @@ select{
   color: rgb(114, 116, 118);
    font-family: "Courier New", Courier, monospace;
 }
-ul li{
-
-  list-style-type: none;
+ul li {
+  display: flex;
+  align-items: center;
   padding: 12px 8px;
   width: 86.5%;
   background-color: rgb(43, 42, 42);
   user-select: none;
   cursor: pointer;
   font-size: 17px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  box-sizing: border-box;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
-.close-btn{
-  size: 5px;
+ul li .top-row {
+  display: contents; 
 }
+
+ul li input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 18px;
+  height: 20px;
+}
+
+ul li span {
+  flex-grow: 1;
+  min-width: 0;               
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  color: rgb(114, 116, 118);
+}
+
+ul li small {
+  flex-shrink: 0;
+  white-space: nowrap;
+  color: gray;
+  margin-left: 8px;
+}
+
+ul li button.close-btn {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: rgb(114, 116, 118);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 5px;
+  margin-left: 10px;
+  margin-top: -1px;
+}
+
 .todo-checkbox{
   size: 5px;
   width: 18px;
@@ -104,9 +143,44 @@ button {
   display: none;
 }
 
+@media (max-width: 600px) {
+  ul li {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 8px;
+  }
 
-@media (min-width: 768px) {
-  .page-container {
-    min-height: 600px;
+  ul li > div.top-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  ul li input[type="checkbox"],
+  ul li small,
+  ul li button.close-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  ul li small {
+    margin-left: 0;
+  }
+
+  ul li button.close-btn {
+    margin-left: auto; 
+  }
+
+  ul li span {
+    flex-grow: 1;
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    display: block;
   }
 }
+
