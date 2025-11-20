@@ -4,35 +4,63 @@
     <link rel="stylesheet" href="tdl.css" />
      <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body>
+  <body id="body">
     <!--body-->
+    
     <div class="page-container">
       <div class="container">
+       
         <div class="header-h">
+          
           <div id="profile" class="list"></div>
+          
           <ul id="doneList"></ul>
-          <div class="inpt">
-            <div id="todo-box">
-              <input type="text" id="inptA" placeholder="Enter your list" />
-              <select id="level" name="leevl">
+<!-- POP UP-->
+          <div class="p-container">
+
+             <div class="pop-up" id="pop-up">
+      
+    <input type="text" id="inptA" placeholder="Enter your list" />
+   
+
+
+    
+    <input type="date">
+    <select id="level" name="leevl">
             <option value="" disabled selected hidden>priority</option>
                 <option value="Low">low</option>
                 <option value="medium">medium</option>
                 <option value="high">high</option>
               </select>
-              <button id="btn2" onclick="makeToDo()">makelist📝</button>
+               <button onclick="makeToDo()">ok</button>
+          
+              
             </div>
+<!-- POP UP-->
+          </div>
+          
+          <div class="inpt">
+            <div id="todo-box">
+  
+            
+
+
+  
+</div>
+
           </div>
         </div>
         <div class="header-z">
+          <button id="btn2" onclick="makePopup()">makelist📝</button>
           <button id="btn1" onclick="clickButton()">profile🧑🏿‍💼</button>
           <button id="btn3" onclick="doneList()">donelist✅</button>
           <button id="btn4" onclick="deleteAll()">deleteall🗑️</button>
+          <button id="clock"></button>
           <ul id="makeList" class="ul-edit"></ul>
         </div>
       </div>
     </div>
     <!--body-->
-    <script src="tdl.js"></script>
+    <script src="tdl.js"></script>  
   </body>
 </html>
